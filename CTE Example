@@ -1,0 +1,26 @@
+-- CTE to select the top 5 customers by total amount paid in specified cities
+WITH top_5_customer_total_paid_cte (cstmr_id,cstmr_first_name,cstmr_last_name,cntry,city,total_amount_paid) AS
+(
+  -- Subquery to select customer details and sum of payment amounts
+  SELECT cust.customer_id, cust.first_name, cust.last_name, cntr.country, c.city, SUM(p.amount) AS total_amount_paid
+  FROM customer cust
+  -- Join payment table on customer_id to get payment amounts for each customer
+  INNER JOIN payment AS p ON cust.customer_id = p.customer_id
+  -- Join address table to get the address for each customer
+  INNER JOIN address AS a ON cust.address_id = a.address_id
+  -- Join city table to get city name for each address
+  INNER JOIN city AS c ON a.city_id = c.city_id
+  -- Join country table to get country name for each city
+  INNER JOIN country as cntr ON c.country_id = cntr.country_id
+  -- Filter for specific cities
+  WHERE c.city IN ('Aurora','Tokat','Tarsus','Atlıxco','Emeishan','Pontianak','Shimoga','Aparecida de Goiânia','Zalantun','Taguig')
+  -- Group by customer and city to sum payments per customer per city
+  GROUP BY cust.customer_id,cntr.country,c.city
+  -- Order the result by total amount paid in descending order to get the highest payers at the top
+  ORDER BY total_amount_paid DESC
+  -- Limit the result to top 5
+  LIMIT 5
+)
+-- Selecting the average of total amount paid from the top 5 customers
+SELECT AVG(total_amount_paid) AS average
+FROM top_5_customer_total_paid_cte
