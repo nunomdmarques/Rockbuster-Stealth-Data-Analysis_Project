@@ -17,5 +17,6 @@ they expect data-driven answers that they can use for their 2020 company strateg
 * Where are customers with a high l ifetime value based?
 * Do sales figures vary between geographic regions?
 
-Download Analysed Dataset: http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
-Download Tableau WorkBook: https://public.tableau.com/app/profile/nuno.marques1822/viz/Achievement3_17115564780350/Top20CountrieswithHighLTVcustomers
+[Download Analysed Dataset](http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)
+
+[Download Tableau WorkBook](https://public.tableau.com/app/profile/nuno.marques1822/viz/Achievement3_17115564780350/Top20CountrieswithHighLTVcustomers)
