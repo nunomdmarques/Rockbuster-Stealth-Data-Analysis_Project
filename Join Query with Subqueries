@@ -1,5 +1,5 @@
 -- This query finds the top 5 customers by total amount paid from the top 10 cities in the top 10 countries by customer count
--- Ideally you would brak this query into smaller queries for large datasets, as this query is large enough that it might cause performance issues
+-- Ideally you would break this query into smaller queries for large datasets, as this query is large enough that it might cause performance issues
 -- You would take the outputs of each of the individual queries and then filter the next query with the results of the last one.
 -- Begin by selecting the necessary customer details and the sum of payments
 SELECT cust.customer_id, 
