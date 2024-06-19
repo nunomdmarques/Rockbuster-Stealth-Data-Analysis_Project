@@ -1,4 +1,3 @@
-# Rockbuster Stealth Data Analysis Project
 This project was done as part of Career Foundry's Data Analytics Course.
 
 [Check the repository](https://github.com/nunomdmarques/Rockbuster-Stealth-Data-Analysis_Project) to find examples of SQL code written to query the dataset, as well as a data dictionary for the dataset and the final presentation with visualizations and conclusions
