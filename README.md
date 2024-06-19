@@ -18,10 +18,13 @@ they expect data-driven answers that they can use for their company strategy. He
 
 <img src="Images/bannerwhichmovies"/>
 
-<img src="Images/AvgRevenueandTotalRevenue.png"/>
+<img src="Images/AvgRevenueandTotalRevenue.png"/><br>
+
+- The most valuable categories are **Comedy, New, Sports, Games , and Horror**
+- The largest categories are **Sports, Sci-Fi, Animation, Drama, and Comedy**
 
 
-### Query used to answer question
+### Query used to answer question:
 
 
 SELECT f.title, SUM(p.amount) AS revenue <br>
@@ -36,9 +39,14 @@ GROUP BY f.title <br>
 ORDER BY revenue DESC <br>
 
 
-<img src="Images/Geography%20Customer%20Base.png"/>
+---
 
-### Query used to answer question
+<img src="Images/Geography%20Customer%20Base.png"/><br>
+- Our customers are mostly located in **Asia and the Americas**
+- **India/China/Japan** represent >25% of our customer base
+- **India, China and the USA** are our top 3 markets by number of Customers<br>
+
+### Query used to answer question:
 
 SELECT cntr.country, COUNT(cust.customer_id) AS num_of_customers<br>
 FROM customer cust<br>
@@ -51,9 +59,30 @@ ON c.country_id = cntr.country_id<br>
 GROUP BY cntr.country<br>
 ORDER BY num_of_customers DESC<br>
 
+---
+
 <img src="Images/Customers%20with%20high%20LTV.png"/>
 
-High LTV Customers were considered customers with a total spend over 120$
+- High LTV Customers were considered the **top 25% of customers by total spent**.
+- Interestingly, Rockbuster's high LTV client base is highly represented in low income countries. This might be due to a lack of similar services being offered at a competitive price in these markets
+
+---
 
 <img src="Images/Geographic%20sales.png"/>
 
+
+- Asia and the Americas have the highest sales volume
+- This is in line with our findings regarding where most of our client base is.
+
+## Conclusions and Recommendations
+
+
+- Customers and sales are mostly located in **Asia and the Americas**, so we should prioritize marketing in these markets, emphasizing **India, China, Japan, and the USA**.
+
+- Countries with more High LTV customers are mostly **low income countries from Africa and Asia**, mixed with a small number of european countries.
+    - This may mean we are **not adequately maximizing the LTV** of our more high-income audiences, like the USA.
+    - We should investigate further if the location of our High-LTV audience is due to low competition in said markets.
+
+- Rockbuster should invest in **more Comedy and Sports content**, which have both valuable and large existing audiences.
+- Rockbuster should invest in **higher-value content** for Sci-Fi, Animation and Drama, which have large audiences we can increase the LTV on.
+- **Thriller** is a high value category which is **underepresented in terms of total spend**. We should investigate if this is due to a lack of quantity of offering, or due to low quality of current offerings.
