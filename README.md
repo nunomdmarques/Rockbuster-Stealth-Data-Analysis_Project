@@ -7,7 +7,7 @@ This project was done as part of Career Foundry's Data Analytics Course.
 [Download Tableau WorkBook](https://public.tableau.com/app/profile/nuno.marques1822/viz/Achievement3_17115564780350/Top20CountrieswithHighLTVcustomers)
 
 ## Tools
-Postgre SQL was used for the storage and analysis of the data. Tableau was used for the visualizations
+Postgre SQL was used for the querying and analysing the data. pgAdmin was used to store the data in a relational database. Tableau was used for the visualizations.
 
 ## Introduction
 Rockbuster Stealth LLC is a movie rental company that used to have stores around the world. Facing stiff competition from streaming services such as Netflix and Amazon Prime,the Rockbuster Stealth management team is planning to use its existing movie licenses to
