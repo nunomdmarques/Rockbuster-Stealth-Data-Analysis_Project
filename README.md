@@ -16,6 +16,17 @@ launch an online video rental service in order to stay competitive.
 The Rockbuster Stealth Management Board has asked a series of business questions and
 they expect data-driven answers that they can use for their company strategy. Here are the main questions they'd like to answer:
 
+- Which movies contributed the most/least to revenue gain?
+- Which countries are Rockbuster customers based in?
+- Where are customers with a high lifetime value based?
+- Do sales figures vary between geographic regions?
+
+## Analysis
+
+The dataset was loaded into a database in pgAdmin, and it was cleaned before running any analysis. Here is an overall look at the dataset, resultant from exploratory data analysis:
+
+<img src="Images/EDA.png"/>
+
 <img src="Images/bannerwhichmovies"/>
 
 <img src="Images/AvgRevenueandTotalRevenue.png"/><br>
