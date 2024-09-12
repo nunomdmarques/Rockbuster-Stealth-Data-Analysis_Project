@@ -37,18 +37,18 @@ The dataset was loaded into a database in pgAdmin, and it was cleaned before run
 
 ### Query used to answer question:
 
-
-SELECT f.title, SUM(p.amount) AS revenue <br>
-FROM film f <br>
-INNER JOIN inventory as i <br>
-ON f.film_id = i.film_id <br>
-INNER JOIN rental as r <br>
-ON i.inventory_id = r.inventory_id <br>
-INNER JOIN payment as p <br>
-ON r.rental_id = p.rental_id <br>
-GROUP BY f.title <br>
-ORDER BY revenue DESC <br>
-
+```sql
+SELECT f.title, SUM(p.amount) as revenue
+FROM film as f 
+INNER JOIN inventory as i 
+ON f.film_id = i.film_id 
+INNER JOIN rental as r 
+ON i.inventory_id = r.inventory_id 
+INNER JOIN payment as p 
+ON r.rental_id = p.rental_id 
+GROUP BY f.title 
+ORDER BY revenue DESC 
+```
 
 ---
 
@@ -58,18 +58,18 @@ ORDER BY revenue DESC <br>
 - **India, China and the USA** are our top 3 markets by number of Customers<br>
 
 ### Query used to answer question:
-
-SELECT cntr.country, COUNT(cust.customer_id) AS num_of_customers<br>
+```sql
+SELECT cntr.country, COUNT(cust.customer_id) as num_of_customers
 FROM customer cust<br>
-INNER JOIN address AS a<br>
-ON cust.address_id = a.address_id<br>
-INNER JOIN city AS c<br>
-ON a.city_id = c.city_id<br>
-INNER JOIN country as cntr<br>
-ON c.country_id = cntr.country_id<br>
-GROUP BY cntr.country<br>
-ORDER BY num_of_customers DESC<br>
-
+INNER JOIN address as a
+ON cust.address_id = a.address_id
+INNER JOIN city as c
+ON a.city_id = c.city_id
+INNER JOIN country as cntr
+ON c.country_id = cntr.country_id
+GROUP BY cntr.country
+ORDER BY num_of_customers DESC
+```
 ---
 
 <img src="Images/Customers%20with%20high%20LTV.png"/>
