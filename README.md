@@ -60,7 +60,7 @@ ORDER BY revenue DESC
 ### Query used to answer question:
 ```sql
 SELECT cntr.country, COUNT(cust.customer_id) as num_of_customers
-FROM customer cust<br>
+FROM customer cust
 INNER JOIN address as a
 ON cust.address_id = a.address_id
 INNER JOIN city as c
